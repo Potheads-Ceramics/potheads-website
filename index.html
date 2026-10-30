@@ -5948,9 +5948,12 @@ system_desktop
     
 
     <div class="form-wrapper claude-contact-form">
-<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" class="claude-netlify-form">
-<input type="hidden" name="form-name" value="contact">
-<p class="claude-hp" style="position:absolute;left:-9999px;"><label>Leave this field blank: <input name="bot-field"></label></p>
+<form name="contact" method="POST" action="https://formsubmit.co/anabellacianciarelli@gmail.com" class="claude-netlify-form">
+<input type="hidden" name="_subject" value="Potheads website: new contact form message">
+<input type="hidden" name="_next" value="https://www.potheadsceramics.com/thank-you.html">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<p class="claude-hp" style="position:absolute;left:-9999px;"><label>Leave this field blank: <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
 <div class="claude-form-row">
 <div class="claude-form-field">
 <label for="claude-fname">Name<span class="claude-req">*</span></label>
@@ -6867,10 +6870,13 @@ function claudeSetInterest(value){
     <div id="claude-modal-body-form">
       <h3 id="claude-modal-title" class="claude-modal-title">Join the club</h3>
       <p class="claude-modal-sub">Leave your email or phone and I'll reach out to set it up.</p>
-      <form name="class-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field-2" id="claude-interest-form">
-        <input type="hidden" name="form-name" value="class-interest">
+      <form name="class-interest" method="POST" action="https://formsubmit.co/anabellacianciarelli@gmail.com" id="claude-interest-form">
+        <input type="hidden" name="_subject" value="Potheads website: new class sign-up request">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://www.potheadsceramics.com/thank-you.html">
         <input type="hidden" name="package" id="claude-modal-package" value="">
-        <p style="position:absolute;left:-9999px;"><label>Leave this field blank: <input name="bot-field-2"></label></p>
+        <p style="position:absolute;left:-9999px;"><label>Leave this field blank: <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
         <div class="claude-form-field">
           <label for="claude-modal-email">Email</label>
           <input type="email" id="claude-modal-email" name="email">
@@ -6934,11 +6940,10 @@ document.addEventListener('DOMContentLoaded', function(){
       return;
     }
     errorEl.style.display = 'none';
-    var data = new URLSearchParams(new FormData(form)).toString();
-    fetch('/', {
+    fetch('https://formsubmit.co/ajax/anabellacianciarelli@gmail.com', {
       method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: data
+      headers: {'Accept': 'application/json'},
+      body: new FormData(form)
     }).then(function(res){
       if (res.ok) {
         document.getElementById('claude-modal-body-form').style.display = 'none';
